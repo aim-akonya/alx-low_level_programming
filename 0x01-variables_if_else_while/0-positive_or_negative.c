@@ -3,6 +3,9 @@
 /* more headers goes there */
 #include <stdio.h>
 /* betty style doc for function main goes there */
+/*
+ * main func -- entry point
+ */
 int main(void)
 {
 	int n;
