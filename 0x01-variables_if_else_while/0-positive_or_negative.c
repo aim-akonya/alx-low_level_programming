@@ -3,8 +3,9 @@
 /* more headers goes there */
 #include <stdio.h>
 /* betty style doc for function main goes there */
-/*
- * main func -- entry point
+/**
+ * main - The main function
+ * Return: - 0 if successfull, 1 otherwise
  */
 int main(void)
 {
