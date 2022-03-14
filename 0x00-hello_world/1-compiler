@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "${CFILE/.c/.o}"  | gcc -c $CFILE -o
+gcc -c $CFILE -o "${CFILE/.c/.o}"
