@@ -10,11 +10,13 @@ int _abs(int n)
 if (n < 0)
 {
 int ab = -n;
-_putchar(ab + '0' );
+char c = ab + '0';
+_putchar(c);
 }
 else
 {
-_putchar(n + '0');
+char c = n + '0';
+_putchar(c);
 }
 return (0);
 }
