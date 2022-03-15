@@ -10,7 +10,7 @@ int _abs(int n)
 if (n < 0)
 {
 int ab = -n;
-_putchar(ab);
+_putchar((char) ab);
 }
 else
 {
