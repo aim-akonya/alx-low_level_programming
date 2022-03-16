@@ -3,11 +3,16 @@
 /**
  * print_last_digit - prints the last digit of a number
  *@n: - number
- *Return: - returns 0
+ *Return: - returns the last digit
  */
 int print_last_digit(int n)
 {
 int lastDigit = n % 10;
-_putchar(lastDigit + '0');
-return (0);
+if (lastDigit < 0)
+{
+_putchar('0' + -lastDigit);
+return (-lastDigit);
+}
+_putchar('0' + lastDigit);
+return (lastDigit);
 }
