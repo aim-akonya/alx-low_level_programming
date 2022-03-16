@@ -15,6 +15,7 @@ for (j = 0; j <= 9; j++)
 int mult = i * j;
 if (mult <= 9)
 {
+_putchar(' ');
 _putchar(mult + '0');
 }
 else
@@ -26,8 +27,6 @@ _putchar(mult % 10 + '0');
 if (j != 9)
 {
 _putchar(',');
-_putchar(' ');
-_putchar(' ');
 _putchar(' ');
 }
 }
