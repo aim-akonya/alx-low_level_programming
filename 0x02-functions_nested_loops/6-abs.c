@@ -3,18 +3,16 @@
 /**
  * _abs - check the code
  * @n: number
- * Return: 0
+ * Return: absolute value
  */
 int _abs(int n)
 {
 if (n < 0)
 {
 int ab = -n;
-_putchar(ab + 48);
+_putchar('0' + ab);
+return (ab);
 }
-else
-{
-_putchar(n + 48);
-}
-return (0);
+_putchar('0' + n);
+return (n);
 }
