@@ -18,6 +18,8 @@ int main(void)
 			char buffer[20];
 
 			sprintf(buffer, "%d", c);
+			putchar(c);
+			putchar(j);
 		}
 	}
 	putchar('\n');
