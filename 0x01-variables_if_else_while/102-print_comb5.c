@@ -6,9 +6,11 @@
 */
 int main(void)
 {
-	for (int c = 0; c < 100; c++)
+	int c, j, i;
+
+	for (c = 0; c < 100; c++)
 	{
-		for (int j = c + 1; j < 100; j++)
+		for (j = c + 1; j < 100; j++)
 		{
 			char buffer[20];
 
@@ -18,7 +20,7 @@ int main(void)
 				putchar('0');
 			}
 
-			for (int i = 0; i < 20; i++)
+			for (i = 0; i < 20; i++)
 			{
 				if (buffer[i] == '\0')
 				{
@@ -34,7 +36,7 @@ int main(void)
 				putchar('0');
 			}
 
-			for (int i = 0; i < 20; i++)
+			for (i = 0; i < 20; i++)
 			{
 				if (buffer[i] == '\0')
 				{
