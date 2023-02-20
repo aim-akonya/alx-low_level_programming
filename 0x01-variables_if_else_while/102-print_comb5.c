@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<stdlib.h>
 
 /**
 * main - main function
@@ -7,19 +6,48 @@
 */
 int main(void)
 {
-	int c;
-
-	for (c = 0; c < 100; c++)
+	for (int c = 0; c < 100; c++)
 	{
-		char j;
-
-		for (j = c + 1; c < 100; c++)
+		for (int j = c + 1; j < 100; j++)
 		{
 			char buffer[20];
 
 			sprintf(buffer, "%d", c);
-			putchar(c);
-			putchar(j);
+			if (c < 10)
+			{
+				putchar('0');
+			}
+
+			for (int i = 0; i < 20; i++)
+			{
+				if (buffer[i] == '\0')
+				{
+					break;
+				}
+				putchar(buffer[i]);
+			}
+			putchar(' ');
+
+			sprintf(buffer, "%d", j);
+			if (j < 10)
+			{
+				putchar('0');
+			}
+
+			for (int i = 0; i < 20; i++)
+			{
+				if (buffer[i] == '\0')
+				{
+					break;
+				}
+				putchar(buffer[i]);
+			}
+			if (c == 98 && j == 99)
+			{
+				continue;
+			}
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
