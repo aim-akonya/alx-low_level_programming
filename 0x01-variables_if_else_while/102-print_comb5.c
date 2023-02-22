@@ -12,7 +12,7 @@ int main(void)
 	{
 		for (j = c + 1; j < 100; j++)
 		{
-			char buffer[20];
+		 	char buffer[20];
 
 			sprintf(buffer, "%d", c);
 			if (c < 10)
