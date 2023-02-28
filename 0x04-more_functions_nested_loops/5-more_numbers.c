@@ -5,30 +5,39 @@
 */
 void more_numbers(void)
 {
-	int i, j;
+	int i;
 
 	for (i = 0; i < 10; i++)
 	{
-		char buffer[2];
-		int value = 14;
+        int value;
 
-		while (value / 10)
-		{
-			buffer[j] = value % 10 + '0';
-			value = value / 10;
-			j++;
-		}
+        for (value = 0; value <= 14; value++)
+        {
+            char buffer[2];
+            int j, num;
 
-		buffer[j] = value + '0';
+            num = value;
 
-		for (j = sizeof(buffer) - 1; j >= 0; j--)
-		{
-			if (buffer[j])
-			{
-				_putchar(buffer[j]);
-			}
-		}
+            if (num < 10)
+            {
+                _putchar(num + '0');
+                continue;
+            }
 
+            for (j = 0; j < 2; j++)
+            {
+                buffer[j] = num % 10 + '0';
+                num = num / 10; 
+            }
+
+            for (j = 1; j >= 0; j--)
+		    {
+			    if (buffer[j])
+			    {
+				    _putchar(buffer[j]);
+			    }
+		    }
+        }
 		_putchar('\n');
 	}
 }
