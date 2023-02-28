@@ -15,10 +15,11 @@ void rev_string(char *s)
 		continue;
 	}
 
-
-	for (j = count - 1, i = 0; j >= 0, i < count; j--, i++)
+	i = 0;
+	for (j = count - 1; j >= 0; j--)
 	{
 		buffer[i] = s[j];
+		i++;
 	}
 
 	s = buffer;
