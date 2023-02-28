@@ -1,5 +1,9 @@
 #include "main.h"
 
+/**
+* print_line - print a line of size n
+* @n: size of the line
+*/
 void print_line(int n)
 {
     int i;
