@@ -11,6 +11,8 @@ int main(void)
    int *p;
    int t[10];
 
+   t[0] = 1;
+
    p = t; /* This works because of the auto implicit conversion to (int *) */
    printf("t: %p\n", t);
    printf("&t[0]: %p\n", &t[0]);
@@ -28,5 +30,7 @@ int main(void)
 void f(int *a)
 {
    printf("a: %p\n", a);
+
+   printf("value of a: %d\n", *a);
    return;
 }
