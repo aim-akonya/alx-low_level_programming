@@ -20,7 +20,7 @@ int main(void)
    printf("Value of a[3]: %d\n", a[3]);
    printf("Value of a[4]: %d\n", a[4]);
 
-   printf()"Address of 'array a': %p\n", &(a[0]);
+   printf("Address of 'array a': %p\n", a);
    printf("Address of 'a[0]': %p\n", &(a[0]));
    printf("Address of 'a[1]': %p\n", &(a[1]));
    printf("Address of 'a[2]': %p\n", &(a[2]));
