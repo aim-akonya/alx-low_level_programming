@@ -7,20 +7,21 @@
  */
 int main(void)
 {
+   int a[5];
    int *p;
-   int a[2];
-   int n;
+   int *p2;
 
-   p = &n;
-   printf("p = &n;\np: %p\n", p);
+   *a = 98;
 
+   printf("%d \n", a[0]);
 
-   printf("p + 1: %p\n", p + 1);
-   printf("p + 2: %p\n", p + 2);
-   printf("p + 10: %p\n", p + 10);
-   /* possible since a is evaluated */
-   /* as an int * in this context */
-   p = a;
-   printf("p = a;\np: %p\np + 1: %p\n", p, p + 1);
+   *(a + 1) = 198;
+   *(a + 2) = 298;
+   a[3] = 398;
+   *(a + 4) = 498;
+   p = a + 1;
+   *p = 98;  
+   p2 = a + 3;
+   *p2 = *p + 1337;
    return (0);
 }
