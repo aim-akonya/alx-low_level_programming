@@ -10,19 +10,19 @@
 */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-    int i;
 
-    for (i = 0; i < size; i++)
-    {
-        int val;
+	int i;
 
-        val = cmp(array[i]);
+	for (i = 0; i < size; i++)
+	{
+		int val;
 
-        if (val !=  0)
-        {
-            return (i);
-        }
+		val = cmp(array[i]);
 
-    }
-    return (-1);
+		if (val !=  0)
+		{
+			return (i);
+		}
+	}
+	return (-1);
 }
