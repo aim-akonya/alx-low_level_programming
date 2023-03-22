@@ -1,5 +1,5 @@
-#include "main.h"
 #include <unistd.h>
+#include "function_pointers.h"
 
 
 int _putchar(char c)
