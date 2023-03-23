@@ -52,5 +52,7 @@ int main(void)
     printf("%d\n", index);
     index = int_index(array, 20, is_strictly_positive);
     printf("%d\n", index);
+    int_index(NULL, 20, &is_98);
+    int_index(array, 20, NULL);
     return (0);
 }
