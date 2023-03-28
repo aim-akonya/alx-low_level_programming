@@ -7,7 +7,5 @@ int main(int agrc, char *argv[])
     int val2;
     char ops;
 
-
-
     return (0);
 }
