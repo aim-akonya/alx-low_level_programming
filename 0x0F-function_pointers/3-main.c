@@ -5,7 +5,7 @@
 int main(int agrc, char *argv[])
 {
     int val1, val2, result;
-    char ops[2];
+    char *ops;
     int (*op_func)(int, int);
 
     if (agrc < 4) {
@@ -13,8 +13,10 @@ int main(int agrc, char *argv[])
         exit(98);
     }
 
+    
+
     val1 = atoi(argv[1]);
-    ops[0]= *argv[2];
+    ops = argv[2];
     val2 = atoi(argv[3]);
 
     /*get the function pointer*/
