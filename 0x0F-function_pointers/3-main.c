@@ -19,6 +19,9 @@ int main(int agrc, char *argv[])
     ops = argv[2];
     val2 = atoi(argv[3]);
 
+    
+
+
     /*get the function pointer*/
     op_func = get_op_func(ops);
     
