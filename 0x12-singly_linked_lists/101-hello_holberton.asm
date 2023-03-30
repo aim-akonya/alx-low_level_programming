@@ -12,7 +12,7 @@ main:
     mov edi, fmt
     mov eax, 0
     call printf
-    
+
     mov rax, 60
     mov rdi, 0
     syscall
