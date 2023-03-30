@@ -29,7 +29,14 @@ size_t print_list(const list_t *h)
 
     while(node)
     {
-        
+        if(node->str)
+        {
+            printf("[%d] %s\n", node->len, node->str);
+        }
+        else
+        {
+            printf("[%d] (%s)\n", 0, "nil");
+        }
     }
 
 
