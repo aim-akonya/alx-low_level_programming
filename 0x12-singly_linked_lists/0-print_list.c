@@ -37,6 +37,8 @@ size_t print_list(const list_t *h)
         {
             printf("[%d] (%s)\n", 0, "nil");
         }
+        node = node->next;
+        node_c++;
     }
 
 
