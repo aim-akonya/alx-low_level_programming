@@ -11,7 +11,7 @@ size_t print_list(const list_t *h)
 	size_t node_c;
 
 	node_c = 0;
-	node = h->next;
+	node = NULL;
 
 	if (h)
 	{
@@ -40,6 +40,5 @@ size_t print_list(const list_t *h)
 		node = node->next;
 		node_c++;
 	}
-
 	return (node_c);
 }
