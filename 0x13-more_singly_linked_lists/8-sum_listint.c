@@ -7,16 +7,17 @@
 */
 int sum_listint(listint_t *head)
 {
-    int sum;
-    listint_t *node;
+	int sum;
+	listint_t *node;
 
-    sum = 0;
-    node = head;
-    while (node)
-    {
-        sum += node->n;
-        node = node->next;
-    }
+	sum = 0;
+	node = head;
 
-    return (sum);
+	while (node)
+	{
+		sum += node->n;
+		node = node->next;
+	}
+
+	return (sum);
 }
