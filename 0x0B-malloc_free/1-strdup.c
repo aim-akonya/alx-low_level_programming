@@ -20,7 +20,7 @@ char *_strdup(char *str)
     /*compute length of string*/
     for (str_size = 0; str[str_size] != '\0'; ++str_size);
 
-    str_cp = malloc(str_size+1);
+    str_cp = (char *) malloc(str_size+1);
     if (str_cp == NULL)
     {
         printf("reached %d\n", str_size);
