@@ -1,18 +1,25 @@
 #include "main.h"
+#include "string.h"
 
 /**
 * print - prints an item
 * @s: string buffer
 * @index: index of print buffer
 */
-void print(char *s, int index)
+void print(char *s)
 {
-	if (s[index] != '\0')
-	{
-		_putchar(s[index]);
-		print(s, ++index);
-	}
+    static int i, len, temp;
+    len = strlen(s);  
+
+    if (i < len/2){    
+        temp = s[i];  
+        s[i] = s[len - i - 1];  
+        s[len - i - 1] = temp;  
+        i++;  
+        print(s); 
+    }
 }
+
 
 /**
 * _print_rev_recursion - prints a string in reverse
@@ -20,8 +27,5 @@ void print(char *s, int index)
 */
 void _print_rev_recursion(char *s)
 {
-	int count;
-
-	count = 0;
-	print(s, count);
+	print(s);
 }
