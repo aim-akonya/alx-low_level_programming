@@ -2,6 +2,7 @@
 
 /**
 * print - prints an item
+* @s: string buffer
 * @index: index of print buffer
 */
 void print(char *s, int index)
@@ -11,7 +12,6 @@ void print(char *s, int index)
 		_putchar(s[index]);
 		print(s, ++index);
 	}
-	
 }
 
 /**
