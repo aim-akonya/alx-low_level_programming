@@ -8,31 +8,34 @@
 */
 char *_strdup(char *str)
 {
-    char *str_cp;
-    unsigned int str_size;
 
-    if (str == NULL)
-    {
-        return (NULL);
-    }
+	char *str_cp;
+	unsigned int str_size;
 
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 
-    /*compute length of string*/
-    for (str_size = 0; str[str_size] != '\0'; ++str_size);
+	/*compute length of string*/
+	for (str_size = 0; str[str_size] != '\0'; ++str_size)
+	{
+		continue;
+	}
 
-    str_cp = (char *) malloc(str_size+1);
-    if (str_cp == NULL)
-    {
-        printf("reached %d\n", str_size);
-        return (NULL);
-    }
+	str_cp = (char *) malloc(str_size + 1);
+	if (str_cp == NULL)
+	{
+		printf("reached %d\n", str_size);
+		return (NULL);
+	}
 
-    for (str_size = 0; str[str_size] != '\0'; ++str_size)
-    {
-        str_cp[str_size] = str[str_size];
-    }
+	for (str_size = 0; str[str_size] != '\0'; ++str_size)
+	{
+		str_cp[str_size] = str[str_size];
+	}
 
-    str_cp[str_size] = '\0';
+	str_cp[str_size] = '\0';
 
-    return str_cp;
+	return (str_cp);
 }
