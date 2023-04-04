@@ -18,17 +18,17 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 
-	s = (max - min)+1;
+	s = (max - min) + 1;
 
 	ptr = (int *) malloc(s * sizeof(int));
 
 	i = 0;
 	while (min <= max)
 	{
-		memset(ptr, min, 1);
+		ptr[i] = min;
 		i++;
 		min++;
 	}
 
-	return ptr;
+	return (ptr);
 }
