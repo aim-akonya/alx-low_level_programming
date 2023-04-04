@@ -1,6 +1,20 @@
 #include "main.h"
 
 /**
+* print - prints an item
+* @index: index of print buffer
+*/
+void print(char *s, int index)
+{
+	if (s[index] != '\0')
+	{
+		_putchar(s[index]);
+		print(s, ++index);
+	}
+	
+}
+
+/**
 * _puts_recursion - prints a string
 * @s: string
 */
@@ -9,10 +23,8 @@ void _puts_recursion(char *s)
 	int len;
 
 	len = 0;
-	while (s[len] != '\0')
-	{
-		_putchar(s[len]);
-		len++;
-	}
+	print(s, len);
 	_putchar('\n');
 }
+
+
