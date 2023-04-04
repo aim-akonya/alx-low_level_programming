@@ -8,13 +8,10 @@
 */
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int len1;
-	unsigned int len2;
-	unsigned int total;
+	unsigned int len1, len2, total, s2_idx, i;
 	char *str_concat;
 
-	len1 = 0;
-	len2 = 0;
+	len1 = len2 = 0;
 	while (s1 != NULL && s1[len1] != '\0')
 	{
 		len1++;
@@ -26,20 +23,24 @@ char *str_concat(char *s1, char *s2)
 	}
 
 	total = len1 + len2;
-
 	str_concat = (char *) malloc(total + 1);
 	if (str_concat == NULL)
 	{
 		return (NULL);
 	}
 
-	while (s1 != NULL && s1[len1] != '\0')
+	for (i = 0; i < total; i++)
 	{
-		len1++;
+		if (i < len1)
+		{
+			str_concat[i] = s1[i];
+		}
+		else
+		{
+			s2_idx = len2 - (total - i);
+			str_concat[i] = s2[s2_idx];
+		}
 	}
-
-
 	str_concat[len1 + len2] = '\0';
-
-	return str_concat;
+	return (str_concat);
 }
