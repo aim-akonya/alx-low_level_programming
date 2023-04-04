@@ -10,6 +10,7 @@ char *str_concat(char *s1, char *s2)
 {
 	unsigned int len1;
 	unsigned int len2;
+	unsigned int total;
 	char *str_concat;
 
 	len1 = 0;
@@ -24,7 +25,19 @@ char *str_concat(char *s1, char *s2)
 		len2++;
 	}
 
-	str_concat = (char *) malloc(len1 + len2 + 1);
+	total = len1 + len2;
+
+	str_concat = (char *) malloc(total + 1);
+	if (str_concat == NULL)
+	{
+		return (NULL);
+	}
+
+	while (s1 != NULL && s1[len1] != '\0')
+	{
+		len1++;
+	}
+
 
 	str_concat[len1 + len2] = '\0';
 
