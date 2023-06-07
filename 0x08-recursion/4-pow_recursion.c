@@ -5,7 +5,7 @@
 * @x: base value
 * @index: count of multiples
 * @result: multiplication result
-* Return - returns the power of a value
+* Return: returns the power of a value
 */
 int pow_multiple(int x, int index, int result)
 {
