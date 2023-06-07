@@ -13,9 +13,9 @@ void print(char *s, int index)
 	{
 		if (s[index] == '\0')
 		{
-			print(s, --index); 
-		} 
-		else 
+			print(s, --index);
+		}
+		else
 		{
 			_putchar(s[index]);
 			print(s, --index);
@@ -31,7 +31,7 @@ void print(char *s, int index)
 void _print_rev_recursion(char *s)
 {
 	int len;
-	
+
 	len = strlen(s);
 	print(s, len);
 
