@@ -6,17 +6,12 @@
 * @s: string buffer
 * @index: index of print buffer
 */
-void print(char *s)
+void print(char *s, int index)
 {
-    int i, len, temp;
-    len = strlen(s);  
-
-    if (i < len/2){    
-        temp = s[i];  
-        s[i] = s[len - i - 1];  
-        s[len - i - 1] = temp;  
-        i++;  
-        print(s); 
+    if (index >= 0)
+    {
+        _putchar(s[index]);
+        print(s, --index);
     }
 }
 
@@ -27,5 +22,10 @@ void print(char *s)
 */
 void _print_rev_recursion(char *s)
 {
-	print(s);
+    int len;
+
+    len = strlen(s);
+
+	print(s, len);
+
 }
