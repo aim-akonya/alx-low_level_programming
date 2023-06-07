@@ -4,20 +4,23 @@
 /**
 * print - prints an item
 * @s: string buffer
+* @index: current index of character
 * @index: index of print buffer
 */
 void print(char *s, int index)
 {
-    if (index >= 0)
-    {
-        if (s[index] == '\0')
-        {
-           print(s, --index); 
-        } else {
-            _putchar(s[index]);
-            print(s, --index);
-        }
-    }
+	if (index >= 0)
+	{
+		if (s[index] == '\0')
+		{
+			print(s, --index); 
+		} 
+		else 
+		{
+			_putchar(s[index]);
+			print(s, --index);
+		}
+	}
 }
 
 
@@ -27,10 +30,10 @@ void print(char *s, int index)
 */
 void _print_rev_recursion(char *s)
 {
-    int len;
-
-    len = strlen(s);
-
+	int len;
+	
+	len = strlen(s);
 	print(s, len);
 
 }
+
