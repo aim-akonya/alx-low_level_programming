@@ -10,8 +10,13 @@ void print(char *s, int index)
 {
     if (index >= 0)
     {
-        _putchar(s[index]);
-        print(s, --index);
+        if (s[index] != '\0')
+        {
+           print(s, --index); 
+        } else {
+            _putchar(s[index]);
+            print(s, --index);
+        }
     }
 }
 
