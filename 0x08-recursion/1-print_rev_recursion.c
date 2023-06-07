@@ -8,7 +8,7 @@
 */
 void print(char *s)
 {
-    static int i, len, temp;
+    int i, len, temp;
     len = strlen(s);  
 
     if (i < len/2){    
