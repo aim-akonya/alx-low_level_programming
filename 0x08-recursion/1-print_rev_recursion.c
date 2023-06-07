@@ -10,7 +10,7 @@ void print(char *s, int index)
 {
     if (index >= 0)
     {
-        if (s[index] != '\0')
+        if (s[index] == '\0')
         {
            print(s, --index); 
         } else {
