@@ -1,13 +1,22 @@
 #include "main.h"
 
-
+/**
+* pow_multiple - multiply power value
+* @x: base value
+* @index: count of multiples
+* @result: multiplication result
+* Return - returns the power of a value
+*/
 int pow_multiple(int x, int index, int result)
 {
 	if (index > 0)
 	{
-		
-		return (x);
+		int val;
+
+		val = x * result;
+		return (pow_multiple(x, --index, val));
 	}
+
 	return (result);
 }
 
@@ -29,5 +38,5 @@ int _pow_recursion(int x, int y)
 		return (1);
 	}
 
-
+	return (pow_multiple(x, y, 1));
 }
