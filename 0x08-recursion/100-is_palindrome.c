@@ -11,10 +11,15 @@
 */
 int compare_characters(char *s, int start, int end, int len)
 {
-	if (start < len-1)
+	if (start < len && end >= 0)
 	{
-
+		if (s[start] != s[end])
+		{
+			return (0);
+		}
+		return (compare_characters(s, ++start, --end, len));
 	}
+	return (1);
 }
 
 /**
@@ -24,11 +29,10 @@ int compare_characters(char *s, int start, int end, int len)
 */
 int is_palindrome(char *s)
 {
-	int start, end, len;
+	int start, end;
 
 	start = 0;
-	len = strlen(s);
-	end = len - 1;
+	end = strlen(s) - 1;
 
-	return (compare_characters(s, start, end, len));
+	return (compare_characters(s, start, end, end + 1));
 }
