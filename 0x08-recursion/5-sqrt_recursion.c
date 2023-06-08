@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
 * sqtr_compute - compute square root
@@ -13,12 +14,14 @@ int sqtr_compute(int n, int val)
 	res = val * val;
 	if (res < n)
 	{
+		printf("reached: %d \n", res);
 		return (sqtr_compute(n, ++val));
 	}
 
 	if (res == n)
 	{
-		return (res);
+		printf("complete %d \n", res);
+		return (val);
 	}
 
 	return (-1);
