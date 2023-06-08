@@ -2,12 +2,16 @@
 
 /**
 * check_factors - recursive function to check possible factors of a number
+* @n: int number
+* @factor: possible factors for n
+* Return: 0 if a factor is found, 1 otherwise 
 */
 int check_factors(int n, int factor)
 {
 	if (factor < n)
 	{
-		if (n % factor == 0){
+		if (n % factor == 0)
+		{
 			return (0);
 		}
 		return (check_factors(n, ++factor));
