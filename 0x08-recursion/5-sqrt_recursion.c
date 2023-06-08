@@ -14,13 +14,11 @@ int sqtr_compute(int n, int val)
 	res = val * val;
 	if (res < n)
 	{
-		printf("reached: %d \n", res);
 		return (sqtr_compute(n, ++val));
 	}
 
 	if (res == n)
 	{
-		printf("complete %d \n", res);
 		return (val);
 	}
 
