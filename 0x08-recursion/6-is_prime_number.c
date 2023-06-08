@@ -4,7 +4,7 @@
 * check_factors - recursive function to check possible factors of a number
 * @n: int number
 * @factor: possible factors for n
-* Return: 0 if a factor is found, 1 otherwise 
+* Return: 0 if a factor is found, 1 otherwise
 */
 int check_factors(int n, int factor)
 {
