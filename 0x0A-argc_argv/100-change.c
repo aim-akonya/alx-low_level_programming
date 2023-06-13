@@ -3,6 +3,15 @@
 #include <stdlib.h>
 
 /**
+* count - count min number of coins
+*/
+int count(int coins[], int sum)
+{
+	// todo
+	return (0);
+}
+
+/**
 * main -  main function
 * @argc: arguments count
 * @argv: array of strings
@@ -10,7 +19,8 @@
 **/
 int main(int argc, char __attribute__((__unused__)) *argv[])
 {
-	int cents;
+	int cents, depth;
+	int coins[5] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
@@ -23,6 +33,8 @@ int main(int argc, char __attribute__((__unused__)) *argv[])
 	{
 		printf("%d\n", 0);
 	}
+
+
 
 	return (0);
 }
