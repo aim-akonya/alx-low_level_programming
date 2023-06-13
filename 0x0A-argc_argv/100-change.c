@@ -5,13 +5,15 @@
 /**
 * count - count min number of coins
 */
-int count(int coins[], int total_coins, int index, int current_sum)
+int count(int coins[], int total_coins, int current_sum, int target_sum)
 {
 	int i;
 
 	for (i = 0; i < total_coins; i++)
 	{
-		//
+		int new_sum;
+		new_sum = current_sum + coins[i];
+		
 	}
 	return (0);
 }
