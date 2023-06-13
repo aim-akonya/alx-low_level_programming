@@ -5,15 +5,29 @@
 /**
 * count - count min number of coins
 */
-int count(int coins[], int total_coins, int current_sum, int target_sum)
+int count(int coins[], int total_coins, int current_sum, int target_sum, int index, int iterations)
 {
 	int i;
 
+	if (current_sum > target_sum)
+	{
+		return (0);
+	}
+
+	if (current_sum == target_sum)
+	{
+		printf ("Found target sum in %d iteration", iterations);
+		/**return (current_sum);**/
+	}
+
 	for (i = 0; i < total_coins; i++)
 	{
-		int new_sum;
+		int new_sum, iter, next;
 		new_sum = current_sum + coins[i];
-		
+
+		iter = iterations +1;
+		next = index + 1;
+		return (count(coins, total_coins, new_sum, target_sum, next, iter));
 	}
 	return (0);
 }
@@ -26,8 +40,8 @@ int count(int coins[], int total_coins, int current_sum, int target_sum)
 **/
 int main(int argc, char __attribute__((__unused__)) *argv[])
 {
-	int cents, depth;
-	int coins[5] = {25, 10, 5, 2, 1};
+	int cents;
+	int coins[5] = {5, 2, 1, 25, 10};
 
 	if (argc != 2)
 	{
@@ -41,7 +55,7 @@ int main(int argc, char __attribute__((__unused__)) *argv[])
 		printf("%d\n", 0);
 	}
 
-
+	count(coins, 5, 0, cents, 0, 0);
 
 	return (0);
 }
