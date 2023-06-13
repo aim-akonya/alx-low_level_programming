@@ -5,9 +5,14 @@
 /**
 * count - count min number of coins
 */
-int count(int coins[], int sum)
+int count(int coins[], int total_coins, int index, int current_sum)
 {
-	// todo
+	int i;
+
+	for (i = 0; i < total_coins; i++)
+	{
+		//
+	}
 	return (0);
 }
 
