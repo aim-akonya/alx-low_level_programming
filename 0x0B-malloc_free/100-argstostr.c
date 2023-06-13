@@ -45,7 +45,7 @@ char *argstostr(int ac, char **av)
 	}
 
 	total_len = count_args_len(ac, av) + ac;
-	str_concat = (char*) malloc(total_len + 1);
+	str_concat = (char *) malloc(total_len + 1);
 
 	if (str_concat == NULL)
 	{
