@@ -1,6 +1,12 @@
 #include "main.h"
 #include "string.h"
 
+/**
+* count_args_len -count number of characters in arrays of strings
+* @ac: word count
+* @av: strings array
+* Return: character length
+*/
 int count_args_len(int ac, char **av)
 {
 	int i, total_len;
@@ -19,7 +25,6 @@ int count_args_len(int ac, char **av)
 			total_len++;
 		}
 	}
-
 	return (total_len);
 }
 
@@ -39,24 +44,9 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	total_len = 0;
-	for (i = 0; i < ac; i++)
-	{
-		int str_pt;
-		char *val;
+	total_len = count_args_len(ac, av) + ac;
+	str_concat = (char*) malloc(total_len + 1);
 
-		val = av[i];
-		str_pt = 0;
-		while (val[str_pt] != '\0')
-		{
-			str_pt++;
-			total_len++;
-		}
-	}
-
-	total_len += ac;
-
-	str_concat = malloc(total_len + 1);
 	if (str_concat == NULL)
 	{
 		return (NULL);
