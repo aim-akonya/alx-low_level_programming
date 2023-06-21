@@ -41,7 +41,7 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 
-	
+	int val1 = 
 
 	return (0);
 }
