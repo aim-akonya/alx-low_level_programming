@@ -5,16 +5,8 @@
 
 
 /**
-* count_bottom_up - count min number of coins
-*/
-int count_bottom_up()
-{
-	return (0);
-}
-
-
-/**
-* count - count min number of coins
+* count - count min number of coins,
+* using classical dynamic programming approach- brute force
 * @coins: list of coins
 * @n: - length of the list of coins
 * @sum: sum of change expected
@@ -69,6 +61,7 @@ int main(int argc, char __attribute__((__unused__)) *argv[])
 	{
 		printf("%d\n", 0);
 	}
+
 
 	total = count(coins, 5, cents);
 	printf("%d\n", total);
