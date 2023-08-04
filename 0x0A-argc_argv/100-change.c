@@ -33,7 +33,7 @@ int count(int coins[], int n, int sum)
 int main(int argc, char __attribute__((__unused__)) *argv[])
 {
 	int cents, total;
-	int coins[5] = {5, 2, 1, 25, 10};
+	int coins[5] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
