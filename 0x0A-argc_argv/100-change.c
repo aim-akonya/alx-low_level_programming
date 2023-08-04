@@ -3,6 +3,16 @@
 #include <stdlib.h>
 #include <limits.h>
 
+
+/**
+* count_bottom_up - count min number of coins
+*/
+int count_bottom_up()
+{
+	return (0);
+}
+
+
 /**
 * count - count min number of coins
 * @coins: list of coins
