@@ -5,7 +5,7 @@
 * @str: string to be converted
 * Return: returns a string representation of the value
 */
-int str_to_int(char * str)
+int str_to_int(char *str)
 {
 	long val;
 	char *end_ptr;
@@ -32,16 +32,22 @@ int str_to_int(char * str)
 * main - multiplies two positive numbers
 * @argc: number of arguments passed to the program
 * @argv: character arguments array
+* Return: return 0 is success, other value otherwise
 */
 int main(int argc, char **argv)
 {
+	int val1, val2;
+
 	if (argc != 3)
 	{
 		printf("Error\n");
 		exit(98);
 	}
 
-	int val1 = 
+	val1 = str_to_int(argv[1]);
+	val2 = str_to_int(argv[2]);
+
+	printf("%d\n", val1 * val2);
 
 	return (0);
 }
