@@ -2,8 +2,8 @@
 
 /**
 * wildcmp - compares two strings
-* @s1: test email addresses
-* @s2: test email addresses
+* @s1:
+* @s2:
 */
 int wildcmp(char *s1, char *s2)
 {
