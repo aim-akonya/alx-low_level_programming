@@ -7,24 +7,28 @@
 */
 char **strtow(char *str)
 {
-	char * name;
+	/*should split a string into an array of strings*/
+	char *arrStr;
+	int wordCount;
+	int maxWordLen;
 	int i;
-	int start_idx, end_idx;
 
-	if (str == NULL || str == "")
-	{
-		return (NULL);
-	}
-
-	i = 0;
-	start_idx = -1;
-	end_idx = -1;
-	while (str[i] != '\0')
+	wordCount = 0;
+	maxWordLen = 0;
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] == ' ')
 		{
+			// update status
+			// include status updates
+			printf("Reached\n");
 			continue;
 		}
+		else
+		{
+
+		}
 	}
+	return (NULL);
 
 }
